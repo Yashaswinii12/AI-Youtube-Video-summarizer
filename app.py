@@ -51,20 +51,20 @@ def generate_gemini_content(transcript_text, format, language):
         return None
 
 # Streamlit App Title
-st.title("🎥 YouTube Transcript to Multilingual Notes Converter")
+st.title(" YouTube Transcript to Multilingual Notes Converter")
 
 # Input YouTube link
-youtube_link = st.text_input("🔗 Enter YouTube Video Link:")
+youtube_link = st.text_input(" Enter YouTube Video Link:")
 
 # Dropdown for summary format
 format_option = st.selectbox(
-    "📋 Select Summary Format:",
+    "Select Summary Format:",
     ["Bullet Points", "Key Points", "Short Paragraph"]
 )
 
 # Dropdown for language selection
 language_option = st.selectbox(
-    "🌐 Select Language for Summary:",
+    " Select Language for Summary:",
     ["English", "Spanish", "French", "German", "Hindi", "Chinese", "Japanese", "Arabic"]
 )
 
@@ -104,12 +104,12 @@ if st.button("Generate Detailed Notes"):
             )
 
         if summary:
-            st.markdown("### 📄 Detailed Notes:")
+            st.markdown("###  Detailed Notes:")
             st.write(summary)
 
             # Option to download the summary
             st.download_button(
-                label="📥 Download Summary as Text File",
+                label=" Download Summary as Text File",
                 data=summary,
                 file_name="summary.txt",
                 mime="text/plain"
